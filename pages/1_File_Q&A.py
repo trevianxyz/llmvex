@@ -8,7 +8,8 @@ with st.sidebar:
     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
 
 st.title("📝 File Q&A with Anthropic")
-uploaded_file = st.file_uploader("Upload an article", type="txt")
+uploaded_file = open("data/final-text-dataset.txt", "rb")
+#uploaded_file = st.file_uploader("Upload an article", type="txt")
 question = st.text_input(
     "Ask something about the article",
     placeholder="Can you give me a short summary?",
