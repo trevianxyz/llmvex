@@ -3,11 +3,12 @@ import openai
 #import anthropic
 
 with st.sidebar:
-    anthropic_api_key = st.text_input("Anthropic API Key", key="file_qa_api_key", type="password")
+    anthropic_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
+    #anthropic_api_key = st.text_input("Anthropic API Key", key="file_qa_api_key", type="password")
     "[View the source code](https://github.com/streamlit/llm-examples/blob/main/pages/1_File_Q%26A.py)"
     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
 
-st.title("📝 File Q&A with Anthropic")
+st.title("Q&A with VEX KB")
 uploaded_file = open("data/final-text-dataset.txt", "rb")
 #uploaded_file = st.file_uploader("Upload an article", type="txt")
 question = st.text_input(
@@ -17,7 +18,7 @@ question = st.text_input(
 )
 
 if uploaded_file and question and not anthropic_api_key:
-    st.info("Please add your Anthropic API key to continue.")
+    st.info("Please add your open API key to continue.")
 
 if uploaded_file and question and anthropic_api_key:
     article = uploaded_file.read().decode()

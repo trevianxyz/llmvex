@@ -38,3 +38,5 @@ To set the OpenAI API key as an environment variable in Streamlit apps, do the f
 ```sh
 OPENAI_API_KEY='xxxxxxxxxx'
 ```
+
+what is the difference between VEX IQ 1st and 2nd generation? 
